@@ -5,7 +5,7 @@
 
 int main()
 {
-    int arr[max_size], i, N, max = 0, min = 0;
+    int arr[max_size], i, N, max = arr[0], min = arr[0];
 
     printf("Enter Array Size: ");
     scanf("%d", &N);
@@ -16,7 +16,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    printf("\nInput array elements: ");
+    printf("\nInput %d array elements: ", N);
     for (i = 0; i < N; i++)
     {
         printf("%d\t", arr[i]);

@@ -36,7 +36,7 @@ int main()
         if (arr[i] < max1 && arr[i] > max2)
             max2 = arr[i];
     }
-    printf("\n\nSecond Maximum Element= %d", max2);
+    printf("\n\nSecond Maximum Element: %d", max2);
 
     return 0;
 }
