@@ -1,39 +1,34 @@
-// Write a C program to count total number of duplicate elements in an array.
-
-/*
-Input:
-Input array elements: 1, 90, 40, 1, 25, 1, 90, 40, 25, 1, 7
-Output:
-Total number of duplicate elements = 4
- */
+// Write a C program to count total number of negative elements in an array.
 
 #include <stdio.h>
 #define max_size 100
 
 int main()
 {
-    int numbers[max_size], i, j, numberSize, numberCount = 0;
+    int arr[max_size], i, N, negativeCount = 0;
 
-    printf("Enter size of the Numbers :");
-    scanf("%d", &numberSize);
+    printf("Enter Array Size: ");
+    scanf("%d", &N);
 
-    printf("Enter elements of the Numbers :");
-    for (i = 0; i < numberSize; i++)
+    for (i = 0; i < N; i++)
     {
-        scanf("%d", &numbers[i]);
+        printf("Enter %dth elements in the array: ", i + 1);
+        scanf("%d", &arr[i]);
     }
 
-    for (i = 0; i < numberSize; i++)
+    printf("\nInput %d array elements: ", N);
+    for (i = 0; i < N; i++)
     {
-        for (j = i + 1; j < numberSize; j++)
-        {
-            if (numbers[i] == numbers[j])
-            {
-                numberCount++;
-            }
-        }
+        printf("%d\t", arr[i]);
     }
-    printf("Total number of duplicate elements found in array = %d", numberCount);
+
+    for (i = 0; i < N; i++)
+    {
+        if (arr[i] < 0)
+            negativeCount++;
+    }
+
+    printf("\nTotal number of negative elements: %d", negativeCount);
 
     return 0;
 }

@@ -1,48 +1,35 @@
-// Write a C program to delete all duplicate elements from an array.
-
-/*
-Input:
-Input array elements: 10, 20, 10, 1, 100, 10, 2, 1, 5, 10
-Output:
-After removing all duplicate elements
-Elements of array are: 10, 20, 1, 100, 2, 5
-*/
+// Write a C program to copy all elements from an array to another array.
 #include <stdio.h>
 #define max_size 100
 
 int main()
 {
-    int numbers[max_size], i, j, k, numberSize;
+    int arr1[max_size], arr2[max_size], i, N, negativeCount = 0;
 
-    printf("Enter size of the Numbers : ");
-    scanf("%d", &numberSize);
+    printf("Enter Array Size: ");
+    scanf("%d", &N);
 
-    printf("Enter elements of the Numbers : ");
-    for (i = 0; i < numberSize; i++)
+    for (i = 0; i < N; i++)
     {
-        scanf("%d", &numbers[i]);
+        printf("Enter %dth elements in the array: ", i + 1);
+        scanf("%d", &arr1[i]);
     }
 
-    for (i = 0; i < numberSize; i++)
+    for (i = 0; i < N; i++)
     {
-        for (j = i + 1; j < numberSize; j++)
-        {
-            if (numbers[i] == numbers[j])
-            {
-                for (k = j; k < numberSize - 1; k++)
-                {
-                    numbers[k] = numbers[k + 1];
-                }
-                numberSize--;
-                j--;
-            }
-        }
+        arr2[i] = arr1[i];
     }
 
-    printf("Numbers elements after deleting duplicates : ");
-    for (i = 0; i < numberSize; i++)
+    printf("\nInput %d array no1. elements: ", N);
+    for (i = 0; i < N; i++)
     {
-        printf("%d\t", numbers[i]);
+        printf("%d\t", arr1[i]);
     }
+    printf("\nInput %d array no2. elements: ", N);
+    for (i = 0; i < N; i++)
+    {
+        printf("%d\t", arr2[i]);
+    }
+
     return 0;
 }
